@@ -1,0 +1,37 @@
+<p style="font-weight:bold;">Test application using Angular and .NET Core</p>
+
+<form [formGroup]="mainForm" (ngSubmit)="onSubmit()">
+  <div class="wrapper">
+    <div class="div1">
+      1. Select text file with data to process (.dat or .txt)
+    </div>
+    <div class="div2">
+      <button class="btn1" (click)="onClick(fileInput, $event)">Upload</button>
+      <input #fileInfo type="text" formControlName="fileInfoText" class="txtFileInfo" readonly />
+      <input #fileInput type="file" formControlName="fileInput" (change)="onFileSelect(fileInput)" style="display:none;" accept=".dat,.txt" />
+    </div>
+    <div class="div3">
+      2. Upload file and generate Report
+    </div>
+    <div class="div4">
+      <button type="submit" class="btn1" (click)="ValidateFile()" [disabled]="!mainForm.valid">Process</button>
+    </div>
+    <input type="text" formControlName="statusText"  class="txt1">
+  </div>
+
+  <div class="gridWrapper">
+    <p *ngIf="!dReport"><em></em></p>
+    <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="dReport">
+      <thead>
+        <tr>
+          <th>Report</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let rRow of dReport">
+          <td>{{ rRow.field1 }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</form>

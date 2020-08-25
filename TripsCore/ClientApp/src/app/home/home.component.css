@@ -1,0 +1,82 @@
+/**** Controls ****/
+.btn1 {
+  width: calc(20vmin);
+  min-width: 100px;
+  display: inline-block;
+  background: none;
+  text-align: center;
+  padding: 6px;
+  margin: 5px;
+  color: #333;
+  font-family: 'Lato', sans-serif;
+  letter-spacing: 1.2px;
+  border: 2px solid #cb2b26;
+  border-radius: 25px;
+  transition: background 0.25s, color 0.25s, font-weight 0.25s;
+}
+
+.btn1:hover {
+  color: #fff;
+  background: #cb2b26;
+}
+
+.btn1:focus {
+  outline: 0;
+}
+
+.btn1:disabled {
+  color: #333;
+  background: #ccc;
+  border: 2px solid #555;
+}
+
+.txtFileInfo {
+  border: hidden;
+  color: #999;
+  font-family: 'Lato', sans-serif;
+  margin-left: 0.5rem;
+}
+
+.txtFileInfo:focus {
+  outline: 0;
+}
+
+.txt1 {
+  border: hidden;
+  margin-left: 75px;
+  width: 360px;
+  color: #88c;
+  font-family: 'Lato', sans-serif;
+  margin-left: 0.5rem;
+}
+
+.tx1:focus {
+  outline: 0;
+}
+
+
+/**** Layout *****/
+.wrapper {
+  margin-top: 20px;
+}
+
+.gridWrapper {
+  margin-top: 40px;
+}
+
+.div1 {
+
+}
+
+.div2 {
+    margin-left: 30px;
+}
+
+.div3 {
+  margin-top: 20px;
+}
+
+.div4 {
+  margin-left: 30px;
+}
+
